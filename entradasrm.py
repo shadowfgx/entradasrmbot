@@ -47,4 +47,3 @@ if check_ticket_availability(ticket_url):
     send_telegram_message("Las entradas para el proximo partido estan disponibles")
 else:
     print('Las entradas de aforo general aún no están disponibles.')
-    send_telegram_message("Las entradas para el proximo partido no estan disponibles")
