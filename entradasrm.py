@@ -1,9 +1,10 @@
+import os
 import requests
 from bs4 import BeautifulSoup
 
 def send_telegram_message(text):
-    token = '7015397922:AAGdquxPNdFN_beW_Sau6j4dfLVYnWIz4ug'
-    chat_id = '512655357'
+    token = os.getenv('TOKEN_TL')
+    chat_id = os.getenv('CHAT_ID')
     url = f'https://api.telegram.org/bot{token}/sendMessage'
     data = {'chat_id': chat_id, 'text': text}
     response = requests.post(url, data=data)
