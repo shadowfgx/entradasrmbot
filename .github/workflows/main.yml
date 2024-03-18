@@ -20,6 +20,6 @@ jobs:
         pip install requests beautifulsoup4
     - name: Execute Python script
       env:
-        TELEGRAM_TOKEN: ${{ secrets.TOKEN_TL }}
+        TOKEN_TL: ${{ secrets.TOKEN_TL }}
         CHAT_ID: ${{ secrets.CHAT_ID }}
       run: python entradasrm.py
