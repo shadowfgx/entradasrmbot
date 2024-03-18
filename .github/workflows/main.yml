@@ -22,4 +22,4 @@ jobs:
       env:
         TELEGRAM_TOKEN: ${{ secrets.TOKEN_TL }}
         CHAT_ID: ${{ secrets.CHAT_ID }}
-      run: python script.py
+      run: python entradasrm.py
