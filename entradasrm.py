@@ -27,11 +27,14 @@ def check_ticket_availability(url):
         
         paragraphs = soup.find_all('p', class_='event-card__text')
         unavailable_text = "Entradas aforo general desde 75 € disponibles próximamente"
+        unavailable_text1 = "entradas-aforo-general desde 75 € disponibles-proximamente"
 
         for paragraph in paragraphs:
             # Convierte el texto a minúsculas directamente sin reemplazar espacios o guiones
-           # print(f"Verificando párrafo: {paragraph}")  # Para depuración
+            print(f"Verificando párrafo: {paragraph}")  # Para depuración
             if unavailable_text in paragraph:
+                return False
+            if unavailable_text1 in paragraph:
                 return False
 
         print("El texto que indica la no disponibilidad ha desaparecido. Las entradas podrían estar disponibles.")
